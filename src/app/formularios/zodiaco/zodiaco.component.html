@@ -1,0 +1,75 @@
+<form class="container-xxl" [formGroup]="formulario">
+  <div class="row justify-content-center">
+    <div class="col-6 border-end border-5">
+
+      <div class="container">
+        <div class="row justify-content-center m-1 p-3 bg-white shadow rounded rounded-5">
+
+          <label class="col-4">Nombres</label>
+          <input type="text" class="col-7 form-text" name="nombre" formControlName="nombre">
+
+          <label class="col-4">Apellido Paterno</label>
+          <input type="text" class="col-7 form-text" name="apeP" formControlName="apeP">
+
+          <label class="col-4">Apellido Materno</label>
+          <input type="text" class="col-7 form-text" name="apeM" formControlName="apeM">
+
+          <div class="row mt-4 p-2 m-1 rounded border">
+            <p class="col-12 fw-bold">Fecha de nacimiento</p>
+
+            <div class="col-3 pe-1">
+              <label >Día</label>
+              <input  type="number" name="fDia" formControlName="fDia">
+            </div>
+
+            <div class="col-3">
+              <label >Mes</label>
+              <input type="number" name="fMes" formControlName="fMes">
+            </div>
+
+            <div class="col-3">
+              <label >Año</label>
+              <input type="number" name="fAnio" formControlName="fAnio">
+            </div>
+
+          </div>
+
+          <label>Sexo</label>
+          <br>
+          <label>
+            <input type="radio" name="Sexo" value="0" checked formControlName="sexo"> Masculino
+          </label>
+          <br>
+          <label>
+            <input type="radio" name="Sexo" value="1" formControlName="sexo"> Femenino
+          </label>
+
+          <div class="row justify-content-center mt-5">
+            <button class="btn btn-primary col-3" (click)="imprimir()" type="submit">Imprimir</button>
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+    <div class="col-6">
+      <div class="row justify-content-center" *ngIf="impreso">
+        <div class="col-8 mt-5">
+          <h2>Hola {{ nombreCompleto }}</h2>
+          <h3 class="mt-3">Tienes {{ edad }} años</h3>
+          <h3 class="mt-3">Tu signo zodiacal</h3>
+          <div class="mt-3">
+            <p class="text-center">Es {{ signoE[0] }}  </p>
+            <picture><img class="rounded mx-auto d-block img-thumbnail" [src]="signoE[1]" alt=""></picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
