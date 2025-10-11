@@ -1,0 +1,56 @@
+<div class="row justify-content-center">
+  <div class="col-6">
+    <!-- Se debe de inicializar [formGroup] para poder usar sus variables dentro del form -->
+    <form [formGroup]="formulario" class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 mb-4">
+
+          <!-- Para poder usar una variable dentro del formGroup se debe de llamar de la manera " formControlName="NombreVariable" " -->
+          <label class="me-3">x1  <input type="number" formControlName="x1"></label>
+          <label>y1  <input type="number" formControlName="y1"></label>
+        </div>
+        <div class="col-12">
+          <label class="me-3">x2  <input type="number" formControlName="x2"></label>
+          <label>y2  <input type="number" formControlName="y2"></label>
+        </div>
+      </div>
+      <br>
+      <button class="btn btn-primary" (click)="Calcular()" type="submit">Calcular</button>
+    </form>
+  </div>
+  <div class="col-6">
+    <H3>La distancia entre los dos puntos es: {{resultado}}</H3>
+  </div>
+</div>
+
+
+
+
+
+
+<!--
+ ---------------------------------------------- Formulario Reactivo
+
+<p>distancia works!</p>
+<div>
+  <h1>Multiplica 2 números</h1>
+  <form [formGroup]="formulario">
+    <div>
+      <label for="">Primer numero:</label>
+      <input formControlName="numero1" type="number">
+    </div>
+
+    <br>
+
+    <div>
+      <label for="">Segundo numero:</label>
+      <input formControlName="numero2" type="number">
+    </div>
+
+    <br>
+    <button (click)="multNumeros()" type="submit">Multiplicar</button>
+
+    <h1>Resultado: {{ resultado }}</h1>
+  </form>
+</div>
+ -->
