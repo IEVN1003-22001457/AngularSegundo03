@@ -1,0 +1,20 @@
+<div class="row justify-content-center">
+  <div class="col-6">
+    <form [formGroup]="formularioAporB" class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 mb-4">
+
+          <label class="me-3">a  <input type="number" formControlName="a"></label>
+        </div>
+        <div class="col-12">
+          <label class="me-3">b  <input type="number" formControlName="b"></label>
+        </div>
+      </div>
+      <br>
+      <button class="btn btn-primary" (click)="Calcular()" type="submit">Calcular</button>
+    </form>
+  </div>
+  <div class="col-6">
+    <H3>La multiplicación de A * B es: {{resultadoAporB}}</H3>
+  </div>
+</div>
