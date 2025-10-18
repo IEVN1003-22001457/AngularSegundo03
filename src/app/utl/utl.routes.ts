@@ -3,18 +3,13 @@ import { Routes } from "@angular/router";
 export default[
 
   {
-    path:'listaralumnos',
+    path:'listaalumnos',
     loadComponent:()=>import('./alumnos/alumnos.component').then(c=>c.AlumnosComponent)
   },
 
   {
     path:'agregar',
     loadComponent:()=>import('./agregar/agregar.component').then(c=>c.AgregarComponent)
-  },
-
-  {
-    path:'alumnos',
-    loadComponent:()=>import('./alumnos/alumnos.component').then(c=>c.AlumnosComponent)
   },
 
   {

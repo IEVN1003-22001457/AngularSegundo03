@@ -4,11 +4,12 @@ import { RouterOutlet } from '@angular/router';
 import { initFlowbite } from 'flowbite';
 
 import { NavbarComponent } from './navbar/navbar.component';
+import { TempComponent } from './tem/temp/temp.component';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent],
+  imports: [RouterOutlet, NavbarComponent, TempComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
